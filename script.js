@@ -9,11 +9,10 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const name = document.getElementById("product-name").value;
-  const description = document.getElementById("product-description").value;
   const price = document.getElementById("product-price").value;
   const imageUrl = document.getElementById("product-image").value;
 
-  const newProduct = { name, description, price, imageUrl };
+  const newProduct = { name, price, imageUrl };
   products.push(newProduct);
   renderProducts();
 
@@ -22,17 +21,22 @@ form.addEventListener("submit", (event) => {
 
 // Mostrar productos
 function renderProducts() {
-  productsContainer.innerHTML = "";
+  productsContainer.innerHTML = ""; // Limpiar el contenedor
   products.forEach((product, index) => {
     const productCard = document.createElement("div");
-    productCard.classList.add("product-card");
+    productCard.classList.add("card"); // Asegúrate de que la clase sea "card"
 
     productCard.innerHTML = `
-      <img src="${product.imageUrl}" alt="${product.name}" width="100%">
-      <h3>${product.name}</h3>
-      <p>${product.description}</p>
-      <p>Precio: ${product.price}</p>
-      <button onclick="deleteProduct(${index})">Eliminar</button>
+      <img src="${product.imageUrl}" alt="${product.name}" class="product-image">
+      <div class="card-container--info">
+        <p class="product-name">${product.name}</p>
+        <div class="card-container--value">
+          <p class="product-price">$ ${product.price}</p>
+          <button class="delete-button" onclick="deleteProduct(${index})" aria-label="Eliminar producto">
+            <img src="./assets/trashIcon.png" alt="Eliminar producto" />
+          </button>
+        </div>
+      </div>
     `;
     productsContainer.appendChild(productCard);
   });

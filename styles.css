@@ -36,6 +36,72 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 20px;
   }
+  /* Estilo de la tarjeta */
+.card {
+  width: 150px;
+  background-color: #4B0082; /* Púrpura */
+  color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  padding: 10px;
+}
+
+/* Imagen del producto */
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Contenedor de información */
+.card-container--info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Nombre del producto */
+.product-name {
+  font-size: 1em;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+/* Precio y botón */
+.card-container--value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Precio del producto */
+.product-price {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Botón de eliminar */
+.delete-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.delete-button img {
+  width: 16px;
+  height: 16px;
+  filter: invert(1); /* Cambia el icono a color blanco */
+}
+
   
   .product-card {
     border: 1px solid #ddd;
@@ -72,4 +138,3 @@ body {
   footer p {
     margin: 5px;
   }
-  
