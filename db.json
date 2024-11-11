@@ -1,10 +1,16 @@
 {
-    "productos": {
-        {
-            "Nombre": "tenis",
-            "Precio": 1000,
-            "imagen": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b383bec4abcd48c9b40f0cf6079cf162_9366/Tenis_Response_Negro_IG9922_01_standard.jpg",
-            "id": 1
-        }
-    }
-}
+    "productos": [
+      {
+        "id": 1,
+        "Nombre": "Tenis",
+        "Precio": 1000,
+        "imagen": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b383bec4abcd48c9b40f0cf6079cf162_9366/Tenis_Response_Negro_IG9922_01_standard.jpg"
+      },
+      {
+        "id": 2,
+        "Nombre": "Camiseta",
+        "Precio": 500,
+        "imagen": "https://example.com/camiseta.jpg"
+      }
+    ]
+  }
