@@ -16,7 +16,6 @@
       <h2>MIS PRODUCTOS:</h2>
       <div id="products-container">
         <!-- Aquí se agregarán los productos con JavaScript -->
-         
       </div>
     </section>
 
@@ -26,11 +25,12 @@
         <label for="product-name">Nombre:</label>
         <input type="text" id="product-name" placeholder="Nombre..." required>
         
-        
         <label for="product-price">Precio:</label>
         <input type="number" id="product-price" placeholder="Precio..." required>
+        
         <label for="product-image">Imagen:</label>
         <input type="url" id="product-image" placeholder="URL..." required>
+        
         <button type="submit">Enviar</button>
         <button type="reset">Limpiar</button>
       </form>
@@ -42,8 +42,8 @@
     <p>(Eslogan de tu tienda)</p>
   </footer>
 
-  <script src="script.js"></script>
-  <script src="js/listarProductos.js"></script>
-  <script src="js/requisiciones.js"></script>
+  <script src="js/requisiciones.js" type="module"></script> <!-- Asegúrate de que sea tipo module -->
+  <script src="script.js" type="module"></script> <!-- Asegúrate de que sea tipo module -->
+  <script src="js/listarProductos.js" type="module"></script> <!-- Asegúrate de que sea tipo module -->
 </body>
 </html>
