@@ -9,6 +9,7 @@ let products = [];
 // Función para cargar productos desde el servidor
 async function loadProducts() {
     products = await fetchProducts(); // Llama a la función fetchProducts para obtener los productos
+    console.log(products);
     renderProducts(products); // Renderiza los productos obtenidos
 }
 

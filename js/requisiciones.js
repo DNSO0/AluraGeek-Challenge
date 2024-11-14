@@ -8,7 +8,7 @@ export async function fetchProducts() {
             throw new Error('Network response was not ok ' + response.statusText);
         }
         const data = await response.json();
-        return data.productos || []; // Retorna la lista de productos o un array vacío
+        return data; // retorna directamente el array
     } catch (error) {
         console.error('Hubo un problema con la requisición Fetch:', error);
         return []; // Retorna un array vacío en caso de error
