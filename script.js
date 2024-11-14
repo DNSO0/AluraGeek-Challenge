@@ -22,7 +22,7 @@ form.addEventListener("submit", async (event) => {
     const imageUrl = document.getElementById("product-image").value;
 
     // Calcular un nuevo ID basado en los productos existentes
-    const newId = products.length > 0 ? Math.max(...products.map(p => Number(p.id))) + 1 : 1;
+    const newId = products.length > 0 ? (Math.max(...products.map(p => Number(p.id))) + 1).toString() : "1";
 
     const newProduct = { id: newId, Nombre: name, Precio: price, imagen: imageUrl };
     
@@ -47,8 +47,8 @@ document.getElementById("products-container").addEventListener("click", async (e
         await deleteProduct(productId); // Asegúrate de implementar esta función
 
         // Filtrar los productos eliminados
-        products = products.filter(product => product.id != productId);
-        renderProducts(products); // Renderiza la lista actualizada
+     // Filtrar los productos eliminados
+products = products.filter(product => product.id !== productId);
     }
 });
 
