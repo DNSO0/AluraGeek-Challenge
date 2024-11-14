@@ -66,8 +66,8 @@ body {
 
 /* Nombre del producto */
 .product-name {
-  font-size: 1em;
-  margin: 5px 0;
+  font-size: 1rem;
+  margin: 0.5rem 0;
   font-weight: bold;
 }
 
@@ -82,18 +82,23 @@ body {
 
 /* Precio del producto */
 .product-price {
-  font-size: 1em;
+  font-size: 0.9rem;
   font-weight: bold;
   margin: 0;
 }
 
 /* Botón de eliminar */
 .delete-button {
-  background-color: transparent;
+  position: absolute; /* Posicionar el botón de manera absoluta */
+  bottom: 10px; /* Ajusta según sea necesario */
+  right: 10px; /* Ajusta según sea necesario */
+  background-color: #ff4d4d; /* Color rojo */
+  color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 0;
-  margin: 0;
+  padding: 5px 10px;
+  z-index: 10; /* Asegúrate de que el botón esté en la parte superior */
 }
 
 .delete-button img {
@@ -103,13 +108,14 @@ body {
 }
 
   
-  .product-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 10px;
-    background-color: white;
-    text-align: center;
-  }
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: white;
+  text-align: center;
+  position: relative; 
+}
   
   .product-card img {
     width: 100%;

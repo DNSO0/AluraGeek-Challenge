@@ -1,4 +1,3 @@
-// listarProductos.js
 export function renderProducts(products) {
     const productsContainer = document.getElementById("products-container");
     productsContainer.innerHTML = ""; // Limpiar el contenedor antes de renderizar
@@ -16,6 +15,7 @@ export function renderProducts(products) {
             <img src="${product.imagen}" alt="${product.Nombre}" />
             <h3 class="product-name">${product.Nombre}</h3>
             <p class="product-price">$${product.Precio}</p>
+            <button class="delete-button" data-id="${product.id}">Eliminar</button>
         `;
 
         productsContainer.appendChild(productCard);
