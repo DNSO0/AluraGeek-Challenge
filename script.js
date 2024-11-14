@@ -44,9 +44,9 @@ document.getElementById("products-container").addEventListener("click", async (e
         const productId = event.target.getAttribute("data-id");
 
         // Lógica para eliminar el producto del servidor
-        await deleteProduct(productId); // Asegúrate de implementar esta función
+        await deleteProduct(productId); 
 
-        // Filtrar los productos eliminados
+        
      // Filtrar los productos eliminados
 products = products.filter(product => product.id !== productId);
     }
